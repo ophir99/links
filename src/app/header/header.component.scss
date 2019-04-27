@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  h1 {
+    margin: 0;
+    padding: 0 10px;
+    align-self: center;
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    li {
+      list-style: none;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

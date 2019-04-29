@@ -1,11 +1,24 @@
 <nav>
   <h1 routerLink="">Super App</h1>
   <ul>
-    <li><a routerLink="">Home</a></li>
-    <li><a routerLink="products">Products</a></li>
-    <li><a routerLink="services">Services</a></li>
-    <li><a routerLink="achievements">Achievements</a></li>
-    <li><a routerLink="contactus">Contact us</a></li>
-    <li><a routerLink="ourresults">Our Results</a></li>
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active-a"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li><a routerLink="products" routerLinkActive="active-a">Products</a></li>
+    <li><a routerLink="services" routerLinkActive="active-a">Services</a></li>
+    <li>
+      <a routerLink="achievements" routerLinkActive="active-a">Achievements</a>
+    </li>
+    <li>
+      <a routerLink="contactus" routerLinkActive="active-a">Contact us</a>
+    </li>
+    <li>
+      <a routerLink="ourresults" routerLinkActive="active-a">Our Results</a>
+    </li>
   </ul>
 </nav>

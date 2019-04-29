@@ -20,6 +20,14 @@ nav {
       flex-grow: 1;
       justify-content: center;
       align-items: center;
+      a {
+        padding: 5px 10px;
+      }
     }
   }
+}
+
+.active-a {
+  color: #fff;
+  background-color: #000;
 }

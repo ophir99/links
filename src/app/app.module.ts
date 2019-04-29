@@ -11,6 +11,20 @@ import { HeaderComponent } from "./header/header.component";
 
 import { RouterModule } from "@angular/router";
 import { FallbackComponent } from "./fallback/fallback.component";
+import { ServicesHomeComponent } from "./services/services-home/services-home.component";
+import { CloudComponent } from "./services/cloud/cloud.component";
+import { SoftDevComponent } from "./services/soft-dev/soft-dev.component";
+import { MobileDevComponent } from "./services/mobile-dev/mobile-dev.component";
+import { PremiumComponent } from "./services/services-home/premium/premium.component";
+import { SilverComponent } from "./services/services-home/silver/silver.component";
+import { GoldComponent } from "./services/services-home/gold/gold.component";
+import { ServicesHomeComponent } from "./services/services-home/services-home.component";
+import { SoftDevComponent } from "./services/soft-dev/soft-dev.component";
+import { MobileDevComponent } from "./services/mobile-dev/mobile-dev.component";
+import { CloudComponent } from "./services/cloud/cloud.component";
+import { PremiumComponent } from "./services/services-home/premium/premium.component";
+import { SilverComponent } from "./services/services-home/silver/silver.component";
+import { GoldComponent } from "./services/services-home/gold/gold.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +35,14 @@ import { FallbackComponent } from "./fallback/fallback.component";
     AchievementsComponent,
     ContactusComponent,
     HeaderComponent,
-    FallbackComponent
+    FallbackComponent,
+    ServicesHomeComponent,
+    SoftDevComponent,
+    MobileDevComponent,
+    CloudComponent,
+    PremiumComponent,
+    SilverComponent,
+    GoldComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +55,44 @@ import { FallbackComponent } from "./fallback/fallback.component";
       },
       {
         path: "services",
-        component: ServicesComponent
+        component: ServicesComponent,
+        children: [
+          {
+            path: "",
+            redirectTo: "serviceshome",
+            pathMatch: "full"
+          },
+          {
+            path: "serviceshome",
+            component: ServicesHomeComponent,
+            children: [
+              {
+                path: "",
+                component: PremiumComponent
+              },
+              {
+                path: "silver",
+                component: SilverComponent
+              },
+              {
+                path: "gold",
+                component: GoldComponent
+              }
+            ]
+          },
+          {
+            path: "cloud",
+            component: CloudComponent
+          },
+          {
+            path: "software",
+            component: SoftDevComponent
+          },
+          {
+            path: "mobile",
+            component: MobileDevComponent
+          }
+        ]
       },
       {
         path: "products",

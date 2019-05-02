@@ -13,6 +13,8 @@ import { ServicesModule } from "./services/services.module";
 import { ProductsModule } from "./products/products.module";
 
 import { AppRoutes } from "./approutes.module";
+
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { AppRoutes } from "./approutes.module";
     HeaderComponent,
     FallbackComponent
   ],
-  imports: [BrowserModule, ProductsModule, AppRoutes],
+  imports: [BrowserModule, FormsModule, ProductsModule, AppRoutes],
   providers: [],
   bootstrap: [AppComponent]
 })

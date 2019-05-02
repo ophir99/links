@@ -1,6 +1,29 @@
 <h1>
   Achievements ==>
 </h1>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        Enter url
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="url" />
+      </td>
+      <td>
+        <h2>
+          {{ url }}
+        </h2>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button (click)="navigate()">Navigate</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <p *ngFor="let item of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]">
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error tempora
   aperiam illo reiciendis commodi corporis, quas repudiandae doloribus,

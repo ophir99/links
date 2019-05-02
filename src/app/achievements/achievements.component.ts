@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-achievements',
-  templateUrl: './achievements.component.html',
-  styleUrls: ['./achievements.component.scss']
+  selector: "app-achievements",
+  templateUrl: "./achievements.component.html",
+  styleUrls: ["./achievements.component.scss"]
 })
 export class AchievementsComponent implements OnInit {
+  url;
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  navigate() {
+    // this.router.navigate([this.url]);
+    this.router.navigateByUrl(this.url);
   }
-
 }

@@ -21,7 +21,12 @@ import { FallbackComponent } from "./fallback/fallback.component";
       },
       {
         path: "services",
-        loadChildren: "./services/services.module#ServicesModule"
+        loadChildren: () =>
+          import("./services/services.module").then(mod => {
+            console.log(mod);
+            return mod.ServicesModule;
+          })
+        // loadChildren: "./services/services.module#ServicesModule"
       },
       {
         path: "contactus",

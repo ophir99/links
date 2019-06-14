@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -6,11 +6,19 @@ import { Router } from "@angular/router";
   templateUrl: "./achievements.component.html",
   styleUrls: ["./achievements.component.scss"]
 })
-export class AchievementsComponent implements OnInit {
+export class AchievementsComponent implements OnInit, OnDestroy {
   url;
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    console.log("FROM CONSTRUCTOR");
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("FROM ONINIT");
+  }
+
+  ngOnDestroy() {
+    console.log("FROM ONDESTROY");
+  }
 
   navigate() {
     // this.router.navigate([this.url]);
